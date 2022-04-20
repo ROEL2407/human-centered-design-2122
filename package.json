@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/ROEL2407/human-centered-design-2122/issues"
   },
-  "homepage": "https://github.com/ROEL2407/human-centered-design-2122#readme"
+  "homepage": "https://github.com/ROEL2407/human-centered-design-2122#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
 }
