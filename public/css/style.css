@@ -1,0 +1,22 @@
+/*
+color pallete:
+#32292F
+#575366
+#6E7DAB
+#5762D5
+#D1E3DD
+
+*/
+
+body {
+    background-color: #6E7DAB;
+}
+
+#dates input[type="radio"] {
+    position: absolute;
+    left: -3000em;
+}
+
+#dates input[type="radio"]:active, #dates label:active {
+    background-color: red;
+}
