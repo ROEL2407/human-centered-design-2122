@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./components/head.ejs") -%>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <form action="">
+            <label for="station">Vul een station in:</label>
+            <input type="text" id="station">
+            <% data.forEach(function(item){ %>
+                <button><%- item -%></button>
+            <% }) %>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
