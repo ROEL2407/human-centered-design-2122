@@ -3,6 +3,8 @@ const app = express();
 const port = process.env.PORT || 4242;
 
 app.set("view engine", "ejs");
+app.set("views", "./views");
+app.use(express.static("public"));
 
 const options = {
   weekday: 'long',
@@ -12,8 +14,8 @@ const options = {
 
 app.get("/", (req, res) => {
   let date = new Date();
-  var allDates = [];
-  let length = 8;
+  var allDates = [new Date().toLocaleDateString("nl-NL", options)];
+  let length = 7;
 
   for (let i = 0; i < length; i++) {
     date.setDate(date.getDate()+1);
