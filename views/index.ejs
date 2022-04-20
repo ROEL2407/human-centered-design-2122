@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <%- include("./components/head.ejs") -%>
-</head>
+<%- include("./components/head.ejs") -%>
 
 <body>
     <header>
@@ -11,11 +9,24 @@
     </header>
     <main>
         <form action="">
-            <label for="station">Vul een station in:</label>
-            <input type="text" id="station">
-            <% data.forEach(function(item){ %>
-                <button><%- item -%></button>
-            <% }) %>
+            <fieldset>
+                <label for="stationVan">Vul een station in waar u vanaf vertrekt:</label>
+                <input type="text" id="stationVan"><br />
+                <label for="stationNaar">Vul een station in waar u aankomt:</label>
+                <input type="text" id="stationNaar">
+            </fieldset>
+            <fieldset>
+                <p>Kies een datum waarop u weg wilt:</p>
+                <% data.forEach(function(item){ %>
+                    <button type="button"><%- item -%></button>
+                <% }) %>
+            </fieldset>
+            <fieldset>
+                <label for="appt">Welke tijd vertrekt u?</label>
+                <input type="time" id="appt" name="appt">
+            </fieldset>
+
+            <input type="submit" value="Afronden">
         </form>
     </main>
     <footer>
