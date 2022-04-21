@@ -11,17 +11,20 @@ color pallete:
 body {
     background-color: #000;
     color: #fff;
+    font-size: 1.5em;
 }
 
 fieldset {
     border: none;
 }
 
-#dates input[type="radio"] {
-    position: absolute;
-    left: -3000em;
+select {
+    height: 2em;
+    font-size: medium;
 }
 
-#dates input[type="radio"]:active, #dates label:active {
-    background-color: red;
+button[type="button"] {
+    font-size: medium;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
 }
