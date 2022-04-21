@@ -11,9 +11,15 @@
         <form action="">
             <fieldset>
                 <label for="stationVan">Vul een station in waar u vanaf vertrekt:</label>
-                <input type="text" id="stationVan"><br />
+                <select name="stationVan" id="stationVan">
+                    <option value="thuis">thuis</option>
+                    <option value="werk">werk</option>
+                </select>
                 <label for="stationNaar">Vul een station in waar u aankomt:</label>
-                <input type="text" id="stationNaar">
+                <select name="stationNaar" id="stationNaar">
+                    <option value="thuis">thuis</option>
+                    <option value="werk">werk</option>
+                </select>
             </fieldset>
             <fieldset>
                 <p>Kies een datum waarop u weg wilt:</p>
