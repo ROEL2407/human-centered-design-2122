@@ -9,7 +9,12 @@ color pallete:
 */
 
 body {
-    background-color: #6E7DAB;
+    background-color: #000;
+    color: #fff;
+}
+
+fieldset {
+    border: none;
 }
 
 #dates input[type="radio"] {
