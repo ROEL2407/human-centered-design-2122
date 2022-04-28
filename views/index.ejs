@@ -10,26 +10,23 @@
     <main>
         <form action="">
             <fieldset>
-                <label for="stationVan">Vul een station in waar u vanaf vertrekt:</label>
-                <select name="stationVan" id="stationVan">
-                    <option value="thuis">thuis</option>
-                    <option value="werk">werk</option>
-                </select>
-                <label for="stationNaar">Vul een station in waar u aankomt:</label>
-                <select name="stationNaar" id="stationNaar">
-                    <option value="thuis">thuis</option>
-                    <option value="werk">werk</option>
-                </select>
+                <p>Vul een station in waar u vanaf vertrekt:</p>
+                <button type="button" class="thuis-route" value="thuis">Thuis</button>
+                <button type="button" class="werk-route" value="werk">Werk</button>
+                <p>Vul een station in waar u aankomt:</p>
+                <button type="button" class="werk-route" value="thuis">Thuis</button>
+                <button type="button" class="thuis-route" value="werk">Werk</button>
             </fieldset>
             <fieldset>
                 <p>Kies een datum waarop u weg wilt:</p>
                 <% data.forEach(function(item){ %>
-                    <button type="button"><%- item -%></button>
+                    <button type="button" class="date"><%- item -%></button>
                 <% }) %>
             </fieldset>
             <fieldset>
                 <label for="appt">Welke tijd vertrekt u?</label>
-                <input type="time" id="appt" name="appt">
+                <p>Huidige tijd: <%- time %></p>
+                <input type="time" id="" name="">
             </fieldset>
 
             <input type="submit" value="Afronden">
@@ -38,6 +35,7 @@
     <footer>
 
     </footer>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
