@@ -11,20 +11,20 @@ color pallete:
 body {
     background-color: #000;
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 fieldset {
     border: none;
 }
 
-select {
-    height: 2em;
-    font-size: medium;
-}
-
-button[type="button"] {
+button[type="button"], input[type=submit] {
     font-size: medium;
     padding: 0.5em;
     margin-bottom: 0.5em;
+}
+
+.clicked {
+    background-color: #ffc917;
+    border-color: #ffc917;
 }
