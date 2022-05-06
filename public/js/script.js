@@ -40,3 +40,35 @@ routeButtons.forEach(place => {
       })
 })
 
+
+// check button press to execute function
+window.addEventListener('keydown', e => {
+    const keyCode = e.keyCode;
+    var form = e.target.form;
+    var buttons = document.querySelectorAll("form button");
+    var index = 1;
+    var removeItem = ["fieldset"];
+
+    // On click 'j'
+    if (keyCode === 74) {
+        index = Array.prototype.indexOf.call(form, e.target);
+        if (e.target.nodeName === "FIELDSET") {
+            
+            form.elements[index - 2].focus();
+        }
+        else {
+            form.elements[index - 1].focus();
+        }
+            e.preventDefault();
+        console.log(buttons);
+        console.log(form.elements);
+    }
+    // On click 'k'
+    if (keyCode === 75) {
+        index = Array.prototype.indexOf.call(form, e.target);
+        form.elements[index + 1].focus();
+        e.preventDefault();
+        console.log(buttons);
+        console.log(form.elements);
+    }
+})
