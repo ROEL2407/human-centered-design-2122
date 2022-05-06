@@ -14,8 +14,13 @@ body {
     font-size: 1.25em;
 }
 
+main {
+    padding-left: 1em;
+}
+
 fieldset {
     border: none;
+    padding-left: 0em;
 }
 
 button[type="button"], input[type=submit] {
