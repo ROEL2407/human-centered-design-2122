@@ -8,10 +8,31 @@ color pallete:
 
 */
 
+.hidden {
+  display: none;
+}
+
+html {
+  height: 100%;
+}
+
 body {
-    background-color: #000;
-    color: #fff;
-    font-size: 1.25em;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.25em;
+  overflow-x: hidden;
+}
+
+body.trainride {
+  background: linear-gradient(0deg, rgba(5,251,0,1) 36%, rgba(0,142,255,1) 100%);
+  color: #000;
+  height: 95vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+body.trainride #legenda {
+  border-color: #000;
 }
 
 main {
@@ -23,13 +44,237 @@ fieldset {
     padding-left: 0em;
 }
 
-button[type="button"], input[type=submit] {
+button[type="button"], input[type="submit"] {
     font-size: medium;
     padding: 0.5em;
     margin-bottom: 0.5em;
+}
+
+button[type="button"]:focus-visible, input[type="submit"]:focus-visible {
+    background-color: #003082;
+    color: #fff;
 }
 
 .clicked {
     background-color: #ffc917;
     border-color: #ffc917;
 }
+
+/*LEGENDA*/
+#legenda {
+  position: absolute;
+  padding: 1em;
+  top: 0em;
+  right: 0em;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+#legenda p {
+  margin: 0.5em 0em;
+}
+#legenda h3 {
+  margin: 1em 0em;
+}
+
+/*TRAIN*/
+
+#train {
+    position: absolute;
+    bottom: 10px;
+    width: 310px;
+    z-index: -1;
+  }
+  
+  .wagon,
+  .cabin,
+  .chimney {
+    border-radius: 4px 4px 0 0;
+    border-top: 4px solid #003082;
+  }
+  
+  .wagon,
+  .motor {
+    border-bottom: 2px solid #003082;
+  }
+  
+  .wagon,
+  .locomotive {
+    display: inline-block;
+    width: 70px;
+    height: 55px;
+    background-color: #ffc917;
+    position: relative;
+  }
+  
+  
+  /*WHEELS*/
+  
+  .wagon:before,
+  .wagon:after,
+  .motor:before,
+  .motor:after,
+  .cabin:after {
+    content: ' ';
+    color: #fff;
+    padding: 6px;
+    position: absolute;
+    border-radius: 46%;
+    border: 6px solid #333;
+    bottom: -10px;
+    background-color: #666;
+  }
+  #train.active .wagon:before,
+  #train.active .wagon:after,
+  #train.active .motor:before,
+  #train.active .motor:after,
+  #train.active .cabin:after {
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+  }
+  
+  .wagon:before {
+    left: 6px;
+  }
+  
+  .wagon:after {
+    right: 6px;
+  }
+  
+  .motor:before {
+    left: 32px;
+  }
+  
+  .motor:after {
+    right: 4px;
+  }
+  
+  .cabin:after {
+    bottom: -50px;
+    padding: 8px;
+    left: 3px;
+  }
+  
+  
+  /*LOCOMOTIVE*/
+  
+  .locomotive {
+    background-color: transparent;
+  }
+  
+  .locomotive .cabin {
+    width: 58px;
+    height: 35px;
+    background-color: #ffc917;
+    position: relative;
+    z-index: 1;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  
+  /*locomotive window*/
+  
+  .locomotive .cabin:before {
+    content: ' ';
+    width: 25px;
+    height: 18px;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    border-radius: 3px;
+    border: 3px solid pink;
+    background-color: #f1f1f1;
+  }
+  
+  .locomotive .motor {
+    display: inline-block;
+    width: 85px;
+    height: 40px;
+    background-color: #ffc917;
+    position: relative;
+    border-radius: 0 8px 0px 0px;
+  }
+  
+  .locomotive .chimney {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #ffc917;
+    right: -6px;
+    bottom: 10px;
+  }
+  #train.active .locomotive .chimney {
+    -webkit-animation: puf 4s 2;
+    animation: puf 4s 2;
+  }
+  
+  .locomotive .light {
+    content: " ";
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    border-radius: 50%;
+    border: 3px solid pink;
+  }
+  
+  #train.active {
+    -webkit-animation: voyage 20s linear infinite;
+    animation: voyage 20s linear infinite;
+  }
+
+  /* Animations */
+  @-webkit-keyframes puf {
+    0% {
+      bottom: 0px
+    }
+    25% {
+      bottom: -1px;
+    }
+    100% {
+      bottom: 5px;
+    }
+  }
+  
+  @keyframes puf {
+    0% {
+      bottom: 0px
+    }
+    25% {
+      bottom: -1px;
+    }
+    100% {
+      bottom: 5px;
+    }
+  }
+
+  @-webkit-keyframes voyage {
+    0% {
+      left: -310px;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  @keyframes voyage {
+    0% {
+      left: -310px;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  @-webkit-keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }

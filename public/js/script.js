@@ -13,7 +13,7 @@ dates.forEach(date => {
 })
 
 // show selected route 
-let routeButtons = document.querySelectorAll("fieldset:first-of-type button");
+let routeButtons = document.querySelectorAll("form div:first-of-type button");
 let home = document.querySelectorAll(".thuis-route");
 let work = document.querySelectorAll(".werk-route");
 
@@ -47,28 +47,36 @@ window.addEventListener('keydown', e => {
     var form = e.target.form;
     var buttons = document.querySelectorAll("form button");
     var index = 1;
-    var removeItem = ["fieldset"];
 
     // On click 'j'
     if (keyCode === 74) {
         index = Array.prototype.indexOf.call(form, e.target);
-        if (e.target.nodeName === "FIELDSET") {
-            
-            form.elements[index - 2].focus();
-        }
-        else {
-            form.elements[index - 1].focus();
-        }
-            e.preventDefault();
-        console.log(buttons);
-        console.log(form.elements);
+        form.elements[index - 1].focus();
+        e.preventDefault();
     }
+
     // On click 'k'
     if (keyCode === 75) {
         index = Array.prototype.indexOf.call(form, e.target);
         form.elements[index + 1].focus();
         e.preventDefault();
-        console.log(buttons);
-        console.log(form.elements);
+    }
+
+    
+    var train = document.querySelector("#train");
+    var body = document.querySelector("body");
+    // On click 'h'
+    if (keyCode === 72) {
+        console.log("h");
+        if(train.classList.contains("hidden")) {
+            train.classList.remove("hidden");
+            train.classList.add("active");
+            body.classList.add("trainride");
+        }
+        else if (train.classList.contains("active")) {
+            train.classList.remove("active");
+            train.classList.add("hidden");
+            body.classList.remove("trainride");
+        }
     }
 })
