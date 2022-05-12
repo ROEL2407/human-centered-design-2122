@@ -51,12 +51,18 @@ New insights:
 Updates:
 As this is the first test, there haven't been any updates yet
 
+Working process after testing:
+
+I firstly changed the select tags to buttons as they are easier to work with for Marijn. I also thought about using the H, J, K, L buttons for tabbing and tried to get the functions of tab to 2 of these buttons.
+
+I also tried to get the NS API running so I could do recommendations. I've tried endlessly to connect the API but it kept saying my key wasn't right when that was the only key I got from them. With little time to the next test I changed the priority of this idea lower.
+
 ### Test 2
 
 New insights:
 
 - The usage of the H, J, K and L keys comes from Vim
-- Extra info like the depart platform and the traveling time are helpfull to be added.
+- Extra info like the depart platform and the traveling time are helpfull if you want to display the trips.
 
 Updates:
 
@@ -64,7 +70,11 @@ Updates:
 
 Working process after testing:
 
-After this test I began to get the tab functions working on the J (backwards tab) and K (forwards tab) buttons. While testing I noticed the fieldsets I had in my form prevented the user to go further as it isn't a tag which can be focused on using tab or something sortlike. Because of this and endlessly trying to remove fieldsets using js form the form elements list I replaced them with div's.
+After this test I began to get the tab functions working on the J (backwards tab) and K (forwards tab) buttons. While testing myself, I noticed the fieldsets I had in my form prevented the user to go further as it isn't a tag which can be focused on. Because of this and endlessly trying to remove fieldsets using js form the form elements list I replaced them with div's.
+
+After that I added nonsense to my app. I went with the overall theme and added a train which will appear on the press of the H key. I added the NS logo to it and the colors of NS.
+
+### Test 3
 
 ## Installation
 
