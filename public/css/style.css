@@ -39,9 +39,12 @@ main {
     padding-left: 1em;
 }
 
-fieldset {
-    border: none;
-    padding-left: 0em;
+form div:last-of-type p {
+  margin-bottom: 0.5em;
+}
+
+form div:last-of-type input[type="time"] {
+  margin-bottom: 1em;
 }
 
 button[type="button"], input[type="submit"] {
