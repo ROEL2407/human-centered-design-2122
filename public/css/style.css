@@ -74,7 +74,7 @@ button[type="button"]:focus-visible, input[type="submit"]:focus-visible {
   margin: 0.5em 0em;
 }
 #legenda h3 {
-  margin: 1em 0em;
+  margin: 0.5em 0em 1em 0em;
 }
 
 /*TRAIN*/
