@@ -8,10 +8,10 @@ Assignment<br />
 
 Project<br />
 [Usage](https://github.com/ROEL2407/real-time-web-2122#usage)<br />
-[Example images](https://github.com/ROEL2407/real-time-web-2122#example-images)<br />
+[Test results](https://github.com/ROEL2407/real-time-web-2122#test-results)<br />
+[Exclusive design principles](https://github.com/ROEL2407/real-time-web-2122#exclusive-design-principles)<br />
 [Installation](https://github.com/ROEL2407/real-time-web-2122#installation)<br />
 [Online version](https://github.com/ROEL2407/real-time-web-2122#online-version)<br />
-[Activity Diagram](https://github.com/ROEL2407/real-time-web-2122#activity-diagrams)<br />
 [Rubric](https://github.com/ROEL2407/real-time-web-2122#rubric)<br />
 [Commits](https://github.com/ROEL2407/real-time-web-2122#commits)<br />
 [Resources](https://github.com/ROEL2407/real-time-web-2122#resources)<br />
@@ -37,6 +37,8 @@ For this project I'm going to test my app with Marijn. I will test 3 times with 
 
 ### Test 1
 
+This test was done in an online call. My teacher Vasilis went to Marijn and places his laptop so i could see what Marijn was doing.
+
 New insights:
 
 - The time of day can be retrieved on the current time instead of a random starting time. Preferably an hour before because of planning reasons.
@@ -58,6 +60,8 @@ I firstly changed the select tags to buttons as they are easier to work with for
 I also tried to get the NS API running so I could do recommendations. I've tried endlessly to connect the API but it kept saying my key wasn't right when that was the only key I got from them. With little time to the next test I changed the priority of this idea lower.
 
 ### Test 2
+
+This test was done offline in class. I connected Marijn's laptop to a big screen so I could see what he was doing and also stood beside him so I could see him using his keyboard and touchpad.
 
 New insights:
 
