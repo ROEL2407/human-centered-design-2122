@@ -55,9 +55,10 @@ button[type="button"]:focus-visible, input[type="submit"]:focus-visible {
     color: #fff;
 }
 
-.clicked {
+.clicked, button.clicked:focus-visible {
     background-color: #ffc917;
     border-color: #ffc917;
+    color: #000;
 }
 
 /*LEGENDA*/
