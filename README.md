@@ -62,6 +62,10 @@ Updates:
 
 - Fixed that Work or Home can't be the destination and the starting point of the trip at the same time.
 
+Working process after testing:
+
+After this test I began to get the tab functions working on the J (backwards tab) and K (forwards tab) buttons. While testing I noticed the fieldsets I had in my form prevented the user to go further as it isn't a tag which can be focused on using tab or something sortlike. Because of this and endlessly trying to remove fieldsets using js form the form elements list I replaced them with div's.
+
 ## Installation
 
 Clone this repository to your own device:
