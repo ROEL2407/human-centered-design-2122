@@ -76,6 +76,24 @@ After that I added nonsense to my app. I went with the overall theme and added a
 
 ### Test 3
 
+## Exclusive design principles
+
+### Study situation
+
+By studying your user with a disability, you can understand their needs for a good user experience. That's why these tests I've done with Marijn are so important. I need to make myself aware that not all people can use a website the way I use it.
+
+### Ignore conventions
+
+By ignoring conventions you can help your user with a disability. Mainstream functionality aren't always helpfull. That's why you need to ignore them and look at other ways for your user to achieve the same goal.
+
+### Prioritize Identity
+
+Studying the user with a disability is not enough, you need to get to know the person you're helping with your website or app. When you know your user, you can implement the things they like. This will help the user experience and make it more attractive.
+
+### Add nonsense
+
+By adding nonsense, you can make your website or app more attractive by the user. Websites don't have to be formal if the situation isn't made for it. You can let the user let off some steam by adding things that are fun. These things can also be helpfull for a developer like me. It can help understanding your user better, which can help you in producing a better website or app.
+
 ## Installation
 
 Clone this repository to your own device:
