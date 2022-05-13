@@ -47,6 +47,7 @@ form div:last-of-type input[type="time"] {
   margin-bottom: 1em;
 }
 
+
 button[type="button"], input[type="submit"] {
     font-size: medium;
     padding: 0.5em;

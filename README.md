@@ -50,7 +50,7 @@ New insights:
 - To home (Eindhoven), Marijn plans as soon as possibly can.
 - Marijn has a trip to another destination maybe once in the month.
 
-Updates:
+Updates before the test:
 As this is the first test, there haven't been any updates yet
 
 Working process after testing:
@@ -68,7 +68,7 @@ New insights:
 - The usage of the H, J, K and L keys comes from Vim
 - Extra info like the depart platform and the traveling time are helpfull if you want to display the trips.
 
-Updates:
+Updates before the test:
 
 - Fixed that Work or Home can't be the destination and the starting point of the trip at the same time.
 
@@ -79,6 +79,39 @@ After this test I began to get the tab functions working on the J (backwards tab
 After that I added nonsense to my app. I went with the overall theme and added a train which will appear on the press of the H key. I added the NS logo to it and the colors of NS.
 
 ### Test 3
+
+This test was done offline in class. I connected Marijn's laptop to a big screen so I could see what he was doing and also stood beside him so I could see him using his keyboard and touchpad.
+
+New Insights:
+
+- J and K button are better to use for up and down
+- The train animation is a bit childish, make it more morbit
+- Marijn takes the train 9:30 am and late in the evening
+- Marijn could take a trip to another place
+- if clicked on the arrows, marijn expects to go to the time input
+
+Updates before the test:
+
+- Added the train animation
+- Added tabbing on j and k
+
+Working process after testing:
+
+After the test I had a little bit of time to change some things based on the feedback from the last test.
+
+I changed little things like the min and max of the time input that i had on 6:00 to 20:00. I changed that to 0:00 to 23:59 because Marijn could take later or earlier trains
+
+I also changed the tab buttons and the button for the animation. I changed the tab buttons from J and K to H and L. Because H was the animation button, I changed this to M.
+
+A thing I forgot to add in earlier tests was make it possible to travel to something else then home and work. I added this with another button for a different journey.
+
+I also added they functionality to go to the time directly if you push the arrow keys.
+
+In this little time I had, I couldn't add everything Marijn had as feedback. These are the things I couldn't add:
+
+- Change the animation to something more Marijn like. Marijn said the animation of the train was a bit childish, which I agree with after a hard look. What I would've done on suggestion of Marijn was a disaster to happen. I thought when the animation button was clicked, a tied up person would fall from the sky and be tied to the tracks. when the train would drive over the person, blood spatters would go everywhere on the background.
+- Marijn said J and K are more used for up and down. I wanted to add this functionality into my app but with this time I couldn't. I would've liked it for skipping to another part of the reservation like from the date buttons to the time input.
+- Preferably I would've added that if the "Anders" journey was selected, the user then could enter their train stations. This actually bugged the tabbing through the item because the item was there in the html but not visible. The system would then stay on the last tabbed item and couldn't go to the next one because it kept trying to get to the input field.
 
 ## Exclusive design principles
 
