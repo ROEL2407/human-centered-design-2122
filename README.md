@@ -113,6 +113,23 @@ In this little time I had, I couldn't add everything Marijn had as feedback. The
 - Marijn said J and K are more used for up and down. I wanted to add this functionality into my app but with this time I couldn't. I would've liked it for skipping to another part of the reservation like from the date buttons to the time input.
 - Preferably I would've added that if the "Anders" journey was selected, the user then could enter their train stations. This actually bugged the tabbing through the item because the item was there in the html but not visible. The system would then stay on the last tabbed item and couldn't go to the next one because it kept trying to get to the input field.
 
+The last look of my date picker:
+<img src="https://github.com/ROEL2407/human-centered-design-2122/blob/main/readme-images/v1.png" alt="a black website, almost none to no styling done">
+
+### Assesment of my teachers
+
+In my assesment it was clear I head some work to do, the styling was not enough and I fully agreed with my teacher about this. That's why I had work to do for my resit. In this part, I will share with you what I've changed. In this picture you will see the new date picker:
+
+<img src="https://github.com/ROEL2407/human-centered-design-2122/blob/main/readme-images/v2.png" alt="new look of the app">
+
+As seen above, I changed the buttons to look like neon signs that are on in a dark pub or bar. I looked at what Marijn likes and tried to do what other classmates didn't already do for him. Marijn likes beer and in the last test he said that he used to go out and party in bars. That's why I choose to do this design and when you putt the lights on with the button "M", you can see the bartender and the bar.
+
+The bartender is a replacement for the train idea I had. Marijn found the design of it too childish and after looking at it, he was totally correct.
+
+The bartender plays a fun but maybe an important role. Based on the time that you look at te date picker, he gives feedback whether it's time to enjoy some beer or not.
+
+<img src="https://github.com/ROEL2407/human-centered-design-2122/blob/main/readme-images/v2_bar.png">
+
 ## Exclusive design principles
 
 ### Study situation
