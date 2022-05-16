@@ -86,6 +86,7 @@ button[type="button"]:focus-visible, input[type="submit"]:focus-visible {
     filter: drop-shadow(0 0 15px #003082) drop-shadow(0 0 50px #003082) contrast(2) brightness(2);
     color: #fff;
     border: 2px solid #003082;
+    font-weight: normal;
 }
 
 button[type="button"].clicked:focus-visible {
@@ -93,6 +94,7 @@ button[type="button"].clicked:focus-visible {
     background-color: #ffc917;
     filter: drop-shadow(0 0 15px #ffc917) drop-shadow(0 0 50px #ffc917) contrast(2) brightness(2);
     border: 2px solid #ffc917;
+    font-weight: normal;
 }
 
 button[type="button"].clicked {
@@ -100,6 +102,7 @@ button[type="button"].clicked {
   color: #ffc917;
   border: 2px solid #ffc917;
   background-color: transparent;
+  font-weight: normal;
 }
 
 
