@@ -166,7 +166,7 @@ This project uses Nodemon. Because of hosting problems you need to change the np
 
 ## Online version
 
-If you don't want to download everything, there's an online version for you [here](https://pwa-rijksmuseum-roel.herokuapp.com/).
+If you don't want to download everything, there's an online version for you [here](https://date-picker-online.herokuapp.com/).
 
 ## Rubric
 
