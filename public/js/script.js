@@ -121,9 +121,28 @@ window.addEventListener('keydown', e => {
         }
     }
 })
-let now = new Date(Date.now() + 1 * (60 * 60 * 1000)); 
- document.getElementById("time").value = now.toLocaleTimeString([], {
+let inAnHour = new Date(Date.now() + 1 * (60 * 60 * 1000)); 
+ document.getElementById("time").value = inAnHour.toLocaleTimeString([], {
     hour: "2-digit",
     minute: "2-digit",
     hour12: false,
-  }); 
+});
+
+let now = new Date(Date.now());
+let timeHolder = now.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+});
+let textTime = document.querySelector("#textTime");
+let textMSG = document.querySelector("#textMSG");
+textTime.innerHTML = "Het is nu: " + timeHolder;
+if (now.getHours() > 9 && (now.getHours() < 17)) {
+    textMSG.innerHTML = "Het is te vroeg voor bier, alhoewel..."
+}
+else if (now.getHours() > 17 && (now.getHours() < 3)) {
+    textMSG.innerHTML = "We gaan kruipennnnn."
+}
+else if (now.getHours() > 3 && (now.getHours() < 9)) {
+    textMSG.innerHTML = "Ga naar huis joh je bent straalbezopen."
+}

@@ -118,8 +118,11 @@ button[type="button"].clicked {
 
 /*PUB*/
 
-#pub {
-
+#under18 {
+  position: absolute;
+    bottom: 0;
+    height: 40%;
+    right: 2em;
 }
 
 #bar {
@@ -128,4 +131,37 @@ button[type="button"].clicked {
   background: linear-gradient(0deg, rgb(159 71 43) 70%, rgb(58, 58, 58) 80%, rgb(159 71 43) 80%, rgb(96 125 139) 80%);
   position: absolute;
   bottom: 0;
+}
+
+#text-bubble {
+  position: absolute;
+  width: 20%;
+  height: 15%;
+  background-color: #fff;
+  right: 13em;
+  bottom: 7em;
+  border-radius: 3em 3em 1em;
+  color: #000;
+}
+
+#text-bubble p {
+  font-size: medium;
+  padding: 0em 1.35em;
+}
+
+#text-bubble span {
+  display: block;
+}
+
+#text-bubble::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 3em solid transparent;
+  border-right: 0em solid transparent;
+  border-top: 3em solid #fff;
+  right: -0.5em;
+  bottom: -1.5em;
+  transform: rotate(320deg);
 }
