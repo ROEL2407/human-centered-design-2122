@@ -28,9 +28,8 @@ body {
 body.pubtime {
   background-image: url('../images/wall_dark.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   height: 95vh;
-  background-repeat: no-repeat;
   background-size: 100%;
 }
 
