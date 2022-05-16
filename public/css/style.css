@@ -140,8 +140,8 @@ button[type="button"].clicked {
   width: 20%;
   height: 15%;
   background-color: #fff;
-  right: 13em;
-  bottom: 7em;
+  right: 25%;
+  bottom: 27vh;
   border-radius: 3em 3em 1em;
   color: #000;
 }
