@@ -140,7 +140,10 @@ textTime.innerHTML = "Het is nu: " + timeHolder;
 if (now.getHours() > 9 && (now.getHours() < 17)) {
     textMSG.innerHTML = "Het is te vroeg voor bier, alhoewel..."
 }
-else if (now.getHours() > 17 && (now.getHours() < 3)) {
+else if (now.getHours() > 17 && (now.getHours() < 24) ) {
+    textMSG.innerHTML = "We gaan kruipennnnn."
+}
+else if (now.getHours() >= 0 && (now.getHours() < 3) ) {
     textMSG.innerHTML = "We gaan kruipennnnn."
 }
 else if (now.getHours() > 3 && (now.getHours() < 9)) {
