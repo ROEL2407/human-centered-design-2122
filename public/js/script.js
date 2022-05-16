@@ -96,29 +96,34 @@ window.addEventListener('keydown', e => {
         index = Array.prototype.indexOf.call(form, e.target);
         form.elements[index + 1].focus();
         e.preventDefault();
+        console.log(form.elements)
     }
-    
     // if clicked go to time
     if (keyCode === 0x25 || keyCode === 0x26 || keyCode === 0x27 || keyCode === 0x28 ){
-        index = 14;
+        index = 11;
         form.elements[index].focus();
     }
 
     
-    var train = document.querySelector("#train");
+    var pub = document.querySelector("#pub");
     var body = document.querySelector("body");
     // On click 'm' to activate animation
     if (keyCode === 77) {
-        if(train.classList.contains("hidden")) {
-            train.classList.remove("hidden");
-            train.classList.add("active");
-            body.classList.add("trainride");
+        if(pub.classList.contains("hidden")) {
+            pub.classList.remove("hidden");
+            pub.classList.add("active");
+            body.classList.add("pubtime");
         }
-        else if (train.classList.contains("active")) {
-            train.classList.remove("active");
-            train.classList.add("hidden");
-            body.classList.remove("trainride");
+        else if (pub.classList.contains("active")) {
+            pub.classList.remove("active");
+            pub.classList.add("hidden");
+            body.classList.remove("pubtime");
         }
     }
 })
-
+let now = new Date(Date.now() + 1 * (60 * 60 * 1000)); 
+ document.getElementById("time").value = now.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  }); 

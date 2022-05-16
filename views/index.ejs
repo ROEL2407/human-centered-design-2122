@@ -8,62 +8,48 @@
 
     </header>
     <main>
-        <section id="legenda">
-            <h3>Legenda</h3>
-            <p><strong>H</strong>: Terug</p>
-            <p><strong>L</strong>: Verder</p>
-            <p><strong>Enter/Spacebar</strong>: Selecteer</p>
-            <p><strong>M</strong>: Zet het licht aan</p>
-            <p><strong>Pijltjes toetsen</strong>: (als de tijd geselecteerd is) tijd veranderen</p>
+        <section id="info-wrapper">
+            <form action="https://www.ns.nl/reisplanner/#/?vertrek=Amsterdam%20Centraal&vertrektype=treinstation&aankomst=Eindhoven%20Strijp-S&aankomsttype=treinstation&type=aankomst&tijd=2022-04-29T" target="_blank">
+                <div>
+                    <p>Vul een station in waar u vanaf vertrekt:</p>
+                    <div class="button_wrapper">
+                        <button type="button" class="thuis-route" value="thuis" autofocus>Thuis</button>
+                        <button type="button" class="werk-route" value="werk">Werk</button>
+                        <button type="button" class="anders" value="anders">Anders</button>
+                    </div>
+                    <!-- <input type="text" class="hidden anders-input" placeholder="voer een station in" required> -->
+                </div>
+                <div id="date">
+                    <p>Kies een datum waarop u weg wilt:</p>
+                    <div class="button_wrapper">
+                    <% data.forEach(function(item){ %>
+                        <button type="button" class="date"><%- item -%></button>
+                    <% }) %>
+                    </div>
+                </div>
+                <div>
+                    <p>Welke tijd vertrekt u?</p>
+                    
+                    <input type="time" min="00:00:00" max="23:59:00" id="time" name="" value="" required>
+                </div>
+    
+                <input type="submit" value="Afronden">
+            </form>
+            <section id="legenda">
+                <h3>Legenda</h3>
+                <p><strong>H</strong>: Terug</p>
+                <p><strong>L</strong>: Verder</p>
+                <p><strong>Enter/Spacebar</strong>: Selecteer</p>
+                <p><strong>M</strong>: Zet het licht aan</p>
+                <p><strong>Pijltjes toetsen</strong>: (als de tijd geselecteerd is) tijd veranderen</p>
+            </section>
         </section>
-        <form action="https://www.ns.nl/reisplanner/#/?vertrek=Amsterdam%20Centraal&vertrektype=treinstation&aankomst=Eindhoven%20Strijp-S&aankomsttype=treinstation&type=aankomst&tijd=2022-04-29T" target="_blank">
-            <div>
-                <p>Vul een station in waar u vanaf vertrekt:</p>
-                <button type="button" class="thuis-route" value="thuis" autofocus>Thuis</button>
-                <button type="button" class="werk-route" value="werk">Werk</button>
-                <button type="button" class="anders" value="anders">Anders</button>
-                <!-- <input type="text" class="hidden anders-input" placeholder="voer een station in" required> -->
-                <p>Vul een station in waar u aankomt:</p>
-                <button type="button" class="werk-route" value="thuis">Thuis</button>
-                <button type="button" class="thuis-route" value="werk">Werk</button>
-                <button type="button" class="anders" value="anders">Anders</button>
-                <!-- <input type="text" class="hidden anders-input" placeholder="voer een station in" required> -->
-            </div>
-            <div>
-                <p>Kies een datum waarop u weg wilt:</p>
-                <% data.forEach(function(item){ %>
-                    <button type="button" class="date"><%- item -%></button>
-                <% }) %>
-            </div>
-            <div>
-                <p>Welke tijd vertrekt u?</p>
-                
-                <input type="time" min="00:00:00" max="23:59:00" id="time" name="" required>
-            </div>
-
-            <input type="submit" value="Afronden">
-        </form>
         <section id="train-wrapper">
             <!-- credits to: https://codepen.io/mmzzba/pen/VpRbjz -->
-            <div id="train" class="hidden">
-                <div class="wagon">
-                    <img src="/images/ns_logo.png" alt="NS logo">
-                </div>
-                <div class="wagon">
-                    <img src="/images/ns_logo.png" alt="NS logo">
-                </div>
-                <div class="wagon">
-                    <img src="/images/ns_logo.png" alt="NS logo">
-                </div>
-                <div class="locomotive">
-                  <div class="cabin"></div>
-                  <div class="motor"></div>
-                  <div class="chimney">
-                    <div class="smoke"></div>
-                  </div>
-                  <div class="light"></div>
-                </div>
-              </div>
+            <div id="pub" class="hidden">
+                <img src="../images/bartender.png" alt="Bartender">
+                <div id="bar"></div>
+            </div>
         </section>
     </main>
     <footer>

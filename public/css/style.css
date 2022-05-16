@@ -14,6 +14,7 @@ color pallete:
 
 html {
   height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -21,22 +22,38 @@ body {
   color: #fff;
   font-size: 1.25em;
   overflow-x: hidden;
+  margin: 0em;
 }
 
-body.trainride {
-  background: linear-gradient(0deg, rgba(181,181,181,1) 2%, rgba(5,251,0,1) 2%, rgba(5,251,0,1) 20%, rgba(0,142,255,1) 20%);
-  color: #000;
+body.pubtime {
+  background-image: url('../images/wall_dark.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 95vh;
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
-body.trainride #legenda {
-  border-color: #000;
+#info-wrapper {
+  margin-left: 1em;
+  display: flex;
+  flex-direction: row;
 }
 
-main {
-    padding-left: 1em;
+.button_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 65%;
+}
+
+.button_wrapper button, #time, input[type="submit"] {
+  margin-left: 0.5em;
+}
+
+#date .button_wrapper button {
+  width: 45%;
 }
 
 form div:last-of-type p {
@@ -50,29 +67,46 @@ form div:last-of-type input[type="time"] {
 
 button[type="button"], input[type="submit"] {
     font-size: medium;
+    font-weight: 700;
     padding: 0.5em;
     margin-bottom: 0.5em;
+    filter: drop-shadow(0 0 15px #db3eb1) drop-shadow(0 0 50px #db3eb1) contrast(2) brightness(2);
+    color: #db3eb1;
+    border: 2px solid #db3eb1;
+    background-color: transparent;
+}
+
+input[type="submit"] {
+  background-color: #db3eb1;
+  color: #000;
 }
 
 button[type="button"]:focus-visible, input[type="submit"]:focus-visible {
     background-color: #003082;
+    filter: drop-shadow(0 0 15px #003082) drop-shadow(0 0 50px #003082) contrast(2) brightness(2);
     color: #fff;
+    border: 2px solid #003082;
 }
 
-.clicked, button.clicked:focus-visible {
-    background-color: #ffc917;
-    border-color: #ffc917;
+button[type="button"].clicked:focus-visible {
     color: #000;
+    background-color: #ffc917;
+    filter: drop-shadow(0 0 15px #ffc917) drop-shadow(0 0 50px #ffc917) contrast(2) brightness(2);
+    border: 2px solid #ffc917;
 }
+
+button[type="button"].clicked {
+  filter: drop-shadow(0 0 15px #ffc917) drop-shadow(0 0 50px #ffc917) contrast(2) brightness(2);
+  color: #ffc917;
+  border: 2px solid #ffc917;
+  background-color: transparent;
+}
+
 
 /*LEGENDA*/
 #legenda {
-  position: absolute;
+  width: 80%;
   padding: 1em;
-  top: 0em;
-  right: 0em;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
 }
 
 #legenda p {
@@ -82,212 +116,16 @@ button[type="button"]:focus-visible, input[type="submit"]:focus-visible {
   margin: 0.5em 0em 1em 0em;
 }
 
-/*TRAIN*/
+/*PUB*/
 
-#train {
-    position: absolute;
-    bottom: 10px;
-    width: 310px;
-    z-index: -1;
-  }
-  
-  .wagon,
-  .cabin,
-  .chimney {
-    border-radius: 4px 4px 0 0;
-    border-top: 4px solid #003082;
-  }
-  
-  .wagon,
-  .motor {
-    border-bottom: 2px solid #003082;
-  }
-  
-  .wagon,
-  .locomotive {
-    display: inline-block;
-    width: 70px;
-    height: 55px;
-    background-color: #ffc917;
-    position: relative;
-  }
-  
+#pub {
 
-  .wagon img {
-    height: 1.25em;
-    margin: auto;
-    position: absolute;
-    left: 5%;
-    top: 15%;
-  }
-  
-  /*WHEELS*/
-  
-  .wagon:before,
-  .wagon:after,
-  .motor:before,
-  .motor:after,
-  .cabin:after {
-    content: ' ';
-    color: #fff;
-    padding: 6px;
-    position: absolute;
-    border-radius: 46%;
-    border: 6px solid #333;
-    bottom: -10px;
-    background-color: #666;
-  }
-  #train.active .wagon:before,
-  #train.active .wagon:after,
-  #train.active .motor:before,
-  #train.active .motor:after,
-  #train.active .cabin:after {
-    -webkit-animation: spin 4s linear infinite;
-    -moz-animation: spin 4s linear infinite;
-    animation: spin 4s linear infinite;
-  }
-  
-  .wagon:before {
-    left: 6px;
-  }
-  
-  .wagon:after {
-    right: 6px;
-  }
-  
-  .motor:before {
-    left: 32px;
-  }
-  
-  .motor:after {
-    right: 4px;
-  }
-  
-  .cabin:after {
-    bottom: -50px;
-    padding: 8px;
-    left: 3px;
-  }
-  
-  
-  /*LOCOMOTIVE*/
-  
-  .locomotive {
-    background-color: transparent;
-  }
-  
-  .locomotive .cabin {
-    width: 58px;
-    height: 35px;
-    background-color: #ffc917;
-    position: relative;
-    z-index: 1;
-    border-radius: 8px 8px 0 0;
-  }
-  
-  
-  /*locomotive window*/
-  
-  .locomotive .cabin:before {
-    content: ' ';
-    width: 25px;
-    height: 18px;
-    position: absolute;
-    top: 10px;
-    left: 15px;
-    border-radius: 3px;
-    border: 3px solid pink;
-    background-color: #f1f1f1;
-  }
-  
-  .locomotive .motor {
-    display: inline-block;
-    width: 85px;
-    height: 40px;
-    background-color: #ffc917;
-    position: relative;
-    border-radius: 0 8px 0px 0px;
-  }
-  
-  .locomotive .chimney {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: #ffc917;
-    right: -6px;
-    bottom: 10px;
-  }
-  #train.active .locomotive .chimney {
-    -webkit-animation: puf 4s 2;
-    animation: puf 4s 2;
-  }
-  
-  .locomotive .light {
-    content: " ";
-    position: absolute;
-    right: -10px;
-    bottom: 0;
-    border-radius: 50%;
-    border: 3px solid pink;
-  }
-  
-  #train.active {
-    -webkit-animation: voyage 20s linear infinite;
-    animation: voyage 20s linear infinite;
-  }
+}
 
-  /* Animations */
-  @-webkit-keyframes puf {
-    0% {
-      bottom: 0px
-    }
-    25% {
-      bottom: -1px;
-    }
-    100% {
-      bottom: 5px;
-    }
-  }
-  
-  @keyframes puf {
-    0% {
-      bottom: 0px
-    }
-    25% {
-      bottom: -1px;
-    }
-    100% {
-      bottom: 5px;
-    }
-  }
-
-  @-webkit-keyframes voyage {
-    0% {
-      left: -310px;
-    }
-    100% {
-      left: 100%;
-    }
-  }
-  
-  @keyframes voyage {
-    0% {
-      left: -310px;
-    }
-    100% {
-      left: 100%;
-    }
-  }
-  
-  @-webkit-keyframes spin {
-    100% {
-      -webkit-transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes spin {
-    100% {
-      -webkit-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  }
+#bar {
+  width: 100%;
+  height: 3em;
+  background: linear-gradient(0deg, rgb(159 71 43) 70%, rgb(58, 58, 58) 80%, rgb(159 71 43) 80%, rgb(96 125 139) 80%);
+  position: absolute;
+  bottom: 0;
+}
