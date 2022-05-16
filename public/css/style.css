@@ -166,4 +166,5 @@ button[type="button"].clicked {
   right: -0.5em;
   bottom: -1.5em;
   transform: rotate(320deg);
+  z-index: -1;
 }
