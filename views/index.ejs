@@ -17,7 +17,14 @@
                         <button type="button" class="werk-route" value="werk">Werk</button>
                         <button type="button" class="anders" value="anders">Anders</button>
                     </div>
-                    <!-- <input type="text" class="hidden anders-input" placeholder="voer een station in" required> -->
+                    <div class="anders-inputs">
+                        <label for="van">Van:</label>
+                        <input type="text" id="van" placeholder="voer een station in" required>
+                    </div>
+                    <div class="anders-inputs">
+                        <label for="naar">Naar:</label>
+                        <input type="text" id="naar" placeholder="voer een station in" required>
+                    </div>
                 </div>
                 <div id="date">
                     <p>Kies een datum waarop u weg wilt:</p>
@@ -45,7 +52,6 @@
             </section>
         </section>
         <section id="pub-wrapper">
-            <!-- credits to: https://codepen.io/mmzzba/pen/VpRbjz -->
             <div id="pub" class="hidden">
                 <div id="text-bubble">
                     <p><span id="textTime"></span><span id="textMSG"></span></p>

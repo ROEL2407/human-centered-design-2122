@@ -17,6 +17,8 @@ let routeButtons = document.querySelectorAll("form div:first-of-type button");
 let home = document.querySelectorAll(".thuis-route");
 let work = document.querySelectorAll(".werk-route");
 let anders = document.querySelectorAll(".anders");
+let van = document.querySelector(".anders-inputs #van");
+let naar = document.querySelector(".anders-inputs #naar"); 
 
 routeButtons.forEach(place => {
     place.addEventListener('click', event => {
@@ -30,8 +32,10 @@ routeButtons.forEach(place => {
             })
             home.forEach( e => {
                 e.classList.add("clicked");
-                e.value
             })
+            van.value = "Eindhoven Strijp-S";
+            naar.value = "Amsterdam Centraal";
+
         }
         else if (place.classList.contains("werk-route") ) {
             home.forEach( e => {
@@ -43,6 +47,8 @@ routeButtons.forEach(place => {
             work.forEach( e => {
                 e.classList.add("clicked");
             })
+            van.value = "Amsterdam Centraal";
+            naar.value = "Eindhoven Strijp-S";
         }
         else if (place.classList.contains("anders") ) {
             home.forEach( e => {
@@ -54,6 +60,8 @@ routeButtons.forEach(place => {
             work.forEach( e => {
                 e.classList.remove("clicked");
             })
+            van.value = "";
+            naar.value = "";
         }
 
             
@@ -81,27 +89,31 @@ routeButtons.forEach(place => {
 window.addEventListener('keydown', e => {
     const keyCode = e.keyCode;
     var form = e.target.form;
-    var buttons = document.querySelectorAll("form button");
-    var index = 1;
+    var formElements = form.elements;
+    var index = Array.prototype.indexOf.call(form, e.target);
+    var usableElements = [];
+
+    for (let i = 0; i < formElements.length; i++) {
+        if(!formElements[i].hasAttribute('disabled', true)) {
+            usableElements.push(formElements[i]);
+        }
+    }
 
     // On click 'h' to tab back
     if (keyCode === 72) {
-        index = Array.prototype.indexOf.call(form, e.target);
-        form.elements[index - 1].focus();
+        formElements[index - 1].focus();
         e.preventDefault();
     }
 
     // On click 'l' to tab forward
     if (keyCode === 76) {
-        index = Array.prototype.indexOf.call(form, e.target);
-        form.elements[index + 1].focus();
+        formElements[index + 1].focus();
         e.preventDefault();
-        console.log(form.elements)
     }
     // if clicked go to time
     if (keyCode === 0x25 || keyCode === 0x26 || keyCode === 0x27 || keyCode === 0x28 ){
-        index = 11;
-        form.elements[index].focus();
+        index = 13;
+        formElements[index].focus();
     }
 
     

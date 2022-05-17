@@ -130,6 +130,16 @@ The bartender plays a fun but maybe an important role. Based on the time that yo
 
 <img src="https://github.com/ROEL2407/human-centered-design-2122/blob/main/readme-images/v2_bar.png">
 
+I also made an attempt to fix the tabbing over disabled input fields. i needed this because Marijn could take another train route. This was really not an easy task. In my first version, the tabbing would stop because the sytsem wanted to go to an element in the form that didn't excist. It also wouldn't skip over it and would stay at the last focused element.
+
+With lots of research and some changes in fixed that the disabled elements wouldn't be in the same list as the other usable elements. with this the system wouldn't use the disabled element to tab to. But the sad part is that the target, which is the indicator in the form that says which element needs to be focussed, still sees the disabled elements. Because this happens, the target will now skip 3 element in each tab forward and will neglect the tab backwards.
+
+This is why I have chosen for the more simple and less user friendly option to not disable the input fields, so that the tabbing does what it needs to do.
+
+As the input fields would be useless if Marijn comes from home or work, I added that if he clicks one of these routes using the buttons, the stations would be filled into the input fields. If "Anders" is selected, the field will go empty again. I specificly chose to make these empty and not add Eindhoven to the "Naar" input field as Marijn doesn't have to go to home when he comes from a different station other then Amsterdam Centraal.
+
+<img src="https://github.com/ROEL2407/human-centered-design-2122/blob/main/readme-images/v2_inputs.png">
+
 ## Exclusive design principles
 
 ### Study situation

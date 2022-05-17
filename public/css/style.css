@@ -63,6 +63,14 @@ form div:last-of-type input[type="time"] {
   margin-bottom: 1em;
 }
 
+.anders-inputs {
+  margin: 0.5em 0em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 45%;
+}
+
 
 button[type="button"], input[type="submit"] {
     font-size: medium;
